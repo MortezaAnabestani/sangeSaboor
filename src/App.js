@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Bar from "./paes/Bar";
+import Bubble from "./paes/Bubble";
+import Cloud from "./paes/Cloud";
+import TextFrequency from "./paes/TextFrequency";
+import Tree from "./paes/Tree";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Bubble />
+      <Bar />
+      <Cloud />
+      <Tree />
+      <TextFrequency />
     </div>
   );
 }
