@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6171c9c0.css",
-    "main.js": "/static/js/main.d0613c60.js",
-    "static/media/Farhang2-Bold.woff": "/static/media/Farhang2-Bold.b4f99013b542bd59f32c.woff",
-    "static/media/Farhang2-Regular.woff": "/static/media/Farhang2-Regular.74a0370aad47f164e09e.woff",
-    "index.html": "/index.html",
-    "main.6171c9c0.css.map": "/static/css/main.6171c9c0.css.map",
-    "main.d0613c60.js.map": "/static/js/main.d0613c60.js.map"
+    "main.css": "/sangeSaboor/static/css/main.697b9547.css",
+    "main.js": "/sangeSaboor/static/js/main.d0613c60.js",
+    "static/media/Farhang2-Bold.woff": "/sangeSaboor/static/media/Farhang2-Bold.b4f99013b542bd59f32c.woff",
+    "static/media/Farhang2-Regular.woff": "/sangeSaboor/static/media/Farhang2-Regular.74a0370aad47f164e09e.woff",
+    "index.html": "/sangeSaboor/index.html",
+    "main.697b9547.css.map": "/sangeSaboor/static/css/main.697b9547.css.map",
+    "main.d0613c60.js.map": "/sangeSaboor/static/js/main.d0613c60.js.map"
   },
   "entrypoints": [
-    "static/css/main.6171c9c0.css",
+    "static/css/main.697b9547.css",
     "static/js/main.d0613c60.js"
   ]
 }
