@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sangeSaboor/static/css/main.697b9547.css",
-    "main.js": "/sangeSaboor/static/js/main.d0613c60.js",
-    "static/media/Farhang2-Bold.woff": "/sangeSaboor/static/media/Farhang2-Bold.b4f99013b542bd59f32c.woff",
-    "static/media/Farhang2-Regular.woff": "/sangeSaboor/static/media/Farhang2-Regular.74a0370aad47f164e09e.woff",
-    "index.html": "/sangeSaboor/index.html",
-    "main.697b9547.css.map": "/sangeSaboor/static/css/main.697b9547.css.map",
-    "main.d0613c60.js.map": "/sangeSaboor/static/js/main.d0613c60.js.map"
+    "main.css": "/termFrequency/static/css/main.6b88e5b8.css",
+    "main.js": "/termFrequency/static/js/main.5ccb3bdb.js",
+    "static/media/Farhang2-Bold.woff": "/termFrequency/static/media/Farhang2-Bold.b4f99013b542bd59f32c.woff",
+    "static/media/Farhang2-Regular.woff": "/termFrequency/static/media/Farhang2-Regular.74a0370aad47f164e09e.woff",
+    "index.html": "/termFrequency/index.html",
+    "main.6b88e5b8.css.map": "/termFrequency/static/css/main.6b88e5b8.css.map",
+    "main.5ccb3bdb.js.map": "/termFrequency/static/js/main.5ccb3bdb.js.map"
   },
   "entrypoints": [
-    "static/css/main.697b9547.css",
-    "static/js/main.d0613c60.js"
+    "static/css/main.6b88e5b8.css",
+    "static/js/main.5ccb3bdb.js"
   ]
 }
