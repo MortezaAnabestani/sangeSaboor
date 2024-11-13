@@ -1,17 +1,9 @@
-import Bar from "./paes/Bar";
-import Bubble from "./paes/Bubble";
-import Cloud from "./paes/Cloud";
-import TextFrequency from "./paes/TextFrequency";
-import Tree from "./paes/Tree";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-    <div className="App">
-      <Bubble />
-      <Bar />
-      <Cloud />
-      <Tree />
-      <TextFrequency />
+    <div className="app">
+      <AppRouter />
     </div>
   );
 }

@@ -1,20 +1,19 @@
 import { useEffect } from "react";
-import text from "../components/TextOfBook";
-import getWordFrequency from "../components/WordFrequency";
 import * as d3 from "d3";
+import { useSelector } from "react-redux";
+import WordFrequency from "../components/WordFrequency";
 
 function Tree() {
+  const data = useSelector((state) => state.newText);
+
   useEffect(() => {
     try {
       // دریافت بسامد واژه‌ها
-      const frequencyData = getWordFrequency(text);
+      const frequencyData = WordFrequency(data);
 
       // تنظیمات نمودار درختی
       const width = window.innerWidth - 100;
       const height = 600;
-
-      // نمایش پیام در حال پردازش
-      document.getElementById("loading").style.display = "block";
 
       // ایجاد نمودار درختی
       const svg = d3
@@ -84,13 +83,10 @@ function Tree() {
         .attr("y", 20)
         .text((d) => d.data.word)
         .style("fill", "white");
-
-      // حذف پیام در حال پردازش
-      document.getElementById("loading").style.display = "none";
     } catch (e) {
       document.getElementById("error").innerText = "General error: " + e.message;
     }
-  }, []);
+  }, [data]);
 
   return (
     <div>

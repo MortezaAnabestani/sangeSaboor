@@ -1,14 +1,13 @@
 import React from "react";
-import getWordFrequency from "../components/WordFrequency";
 
-function TextFrequency() {
+function TextFrequency({ data }) {
   return (
     <table>
       <tr>
         <th>واژه</th>
         <th>فراوانی</th>
       </tr>
-      {getWordFrequency().map((item) => (
+      {data.map((item) => (
         <tr>
           <td>{item.word}</td>
           <td>{item.count}</td>

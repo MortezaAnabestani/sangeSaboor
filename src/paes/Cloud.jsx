@@ -1,20 +1,22 @@
 import React, { useEffect } from "react";
-import text from "../components/TextOfBook";
-import getWordFrequency from "../components/WordFrequency";
 import * as d3 from "d3";
 import cloud from "d3-cloud";
+import { useSelector } from "react-redux";
+import WordFrequency from "../components/WordFrequency";
 
 function Cloud() {
+  const data = useSelector((state) => state.newText);
+
   useEffect(() => {
     try {
       // دریافت بسامد واژه‌ها
-      const frequencyData = getWordFrequency(text);
+      const frequencyData = WordFrequency(data);
 
       // تنظیمات نمودار ابر کلمات
       const width = window.innerWidth - 100;
       const height = 600;
 
-      // نمایش پیام در حال پردازش
+      // نمایش پیام در حال
       const loadingElement = document.getElementById("loading");
       if (loadingElement) loadingElement.style.display = "block";
 
@@ -37,9 +39,6 @@ function Cloud() {
 
       function draw(words) {
         try {
-          // حذف پیام در حال پردازش
-          if (loadingElement) loadingElement.style.display = "none";
-
           const svg = d3
             .select("#cloudChart")
             .append("svg")
@@ -95,7 +94,7 @@ function Cloud() {
       const errorElement = document.getElementById("error");
       if (errorElement) errorElement.innerText = "General error: " + e.message;
     }
-  }, []);
+  }, [data]);
 
   return (
     <div>

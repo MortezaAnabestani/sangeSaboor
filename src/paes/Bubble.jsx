@@ -1,14 +1,14 @@
 import { useEffect } from "react";
-import text from "../components/TextOfBook";
-import getWordFrequency from "../components/WordFrequency";
 import * as d3 from "d3";
+import { useSelector } from "react-redux";
+import WordFrequency from "../components/WordFrequency";
 
 function Bubble() {
+  const data = useSelector((state) => state.newText);
   useEffect(() => {
     try {
       // دریافت بسامد واژه‌ها
-      const frequencyData = getWordFrequency(text);
-
+      const frequencyData = WordFrequency(data);
       // تنظیمات نمودار حبابی
       const width = window.innerWidth - 100;
       const height = 800;

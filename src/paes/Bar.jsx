@@ -1,21 +1,20 @@
 import { useEffect } from "react";
-import text from "../components/TextOfBook";
-import getWordFrequency from "../components/WordFrequency";
 import * as d3 from "d3";
+import { useSelector } from "react-redux";
+import WordFrequency from "../components/WordFrequency";
 
 function Bar() {
-  useEffect(() => {
+  const data = useSelector((state) => state.newText);
+
+  const visualise = (newData) => {
     try {
       // دریافت بسامد واژه‌ها
-      const frequencyData = getWordFrequency(text);
+      const frequencyData = newData;
 
       // تنظیمات نمودار میله‌ای
-      const width = window.innerWidth - 100;
-      const height = 600;
+      const width = window.innerWidth - 200;
+      const height = 500;
       const margin = { top: 40, right: 20, bottom: 50, left: 70 };
-
-      // نمایش پیام در حال پردازش
-      document.getElementById("loading").style.display = "block";
 
       // ایجاد نمودار میله‌ای
       const svg = d3
@@ -25,7 +24,6 @@ function Bar() {
         .attr("height", height)
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
-
       const x = d3
         .scaleBand()
         .range([0, width - margin.left - margin.right])
@@ -73,7 +71,7 @@ function Bar() {
             .attr("x", x(d.word) + x.bandwidth() / 2)
             .attr("y", y(d.count) - 15)
             .attr("text-anchor", "middle")
-            .attr("font-size", "14px")
+            .attr("font-size", "18px")
             .attr("font-weight", "bold")
             .text(`${d.word}: ${d.count}`);
         })
@@ -88,12 +86,13 @@ function Bar() {
           // حذف متن هنگام خروج موس
           svg.selectAll(".label").remove();
         });
-
-      // حذف پیام در حال پردازش
-      document.getElementById("loading").style.display = "none";
     } catch (e) {
       document.getElementById("error").innerText = "General error: " + e.message;
     }
+  };
+
+  useEffect(() => {
+    visualise(WordFrequency(data));
   }, []);
 
   return (
