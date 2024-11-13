@@ -12,24 +12,24 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path: "/",
+        path: "/termFrequency",
         element: <Home />,
       },
       {
-        path: "/bar",
+        path: "/termFrequency/bar",
         element: <Bar />,
       },
       {
-        path: "/bubble",
+        path: "/termFrequency/bubble",
         element: <Bubble />,
       },
       {
-        path: "/cloud",
+        path: "/termFrequency/cloud",
         element: <Cloud />,
       },
-      { path: "/tree", element: <Tree /> },
+      { path: "/termFrequency/tree", element: <Tree /> },
       {
-        path: "/chart",
+        path: "/termFrequency/chart",
         element: <TextFrequency />,
       },
     ],

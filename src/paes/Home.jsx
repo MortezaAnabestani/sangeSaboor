@@ -15,7 +15,7 @@ const Home = () => {
     } catch (error) {
       console.log(error);
     }
-    navigate("/bar");
+    navigate("/termFrequency/bubble");
   };
 
   return (
