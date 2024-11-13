@@ -5,6 +5,7 @@ import Cloud from "../paes/Cloud";
 import Tree from "../paes/Tree";
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../paes/Root";
+import TextFrequency from "../paes/TextFrequency";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
         path: "/cloud",
         element: <Cloud />,
       },
-      { path: "/Tree", element: <Tree /> },
+      { path: "/tree", element: <Tree /> },
+      {
+        path: "/chart",
+        element: <TextFrequency />,
+      },
     ],
   },
 ]);

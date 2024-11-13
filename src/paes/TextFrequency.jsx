@@ -1,13 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import WordFrequency from "../components/WordFrequency";
 
-function TextFrequency({ data }) {
+function TextFrequency() {
+  const data = useSelector((state) => state.newText);
+
   return (
     <table>
       <tr>
         <th>واژه</th>
         <th>فراوانی</th>
       </tr>
-      {data.map((item) => (
+      {WordFrequency(data).map((item) => (
         <tr>
           <td>{item.word}</td>
           <td>{item.count}</td>
