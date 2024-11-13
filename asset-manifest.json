@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/termFrequency/static/css/main.6b88e5b8.css",
-    "main.js": "/termFrequency/static/js/main.5ccb3bdb.js",
+    "main.js": "/termFrequency/static/js/main.d2feb86e.js",
     "static/media/Farhang2-Bold.woff": "/termFrequency/static/media/Farhang2-Bold.b4f99013b542bd59f32c.woff",
     "static/media/Farhang2-Regular.woff": "/termFrequency/static/media/Farhang2-Regular.74a0370aad47f164e09e.woff",
     "index.html": "/termFrequency/index.html",
     "main.6b88e5b8.css.map": "/termFrequency/static/css/main.6b88e5b8.css.map",
-    "main.5ccb3bdb.js.map": "/termFrequency/static/js/main.5ccb3bdb.js.map"
+    "main.d2feb86e.js.map": "/termFrequency/static/js/main.d2feb86e.js.map"
   },
   "entrypoints": [
     "static/css/main.6b88e5b8.css",
-    "static/js/main.5ccb3bdb.js"
+    "static/js/main.d2feb86e.js"
   ]
 }
